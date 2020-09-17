@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Century Gothic", "Bookman Old Style";
+    font-size: 10px;
+    color: #484848;
+    background-color: #fff;
+}
+
+.np {
+    padding: 0px !important;
+}
+
+.f{
+    display: flex;
+}

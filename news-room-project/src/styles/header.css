@@ -1,0 +1,92 @@
+* {
+    font-family: "Century Gothic", "Bookman Old Style";
+}
+
+.header-container {
+    background: url(../utils/header-background.png) no-repeat fixed center;
+}
+
+/*Logo styles*/
+.logo {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*NavBar styles*/
+.main-container {
+    padding: 0;
+    display: flex;
+    background-color: #03989E;
+    border-bottom: .4em solid #AFCFCD;
+}
+
+nav {
+    height: 40px;        
+}
+
+.nav-bar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    margin: 0 !important;
+    padding: 8px 0px;
+}
+
+.nav-option {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+.nav-option:hover {
+    color: #D8D8D8;
+    font-size: 1.1em;
+    text-decoration: none;    
+}
+
+/*SearchBar styles*/
+.searchbar-container{
+    padding: 5px;
+}
+
+.searchbar-form{
+    float: right;
+}
+
+.searchbar-input{
+    border: none;
+    height: 30px;  
+    width: 200px;  
+    padding: 5px;
+    color: black;
+    font-weight: 600;
+    background-color: #D8D8D8;
+    opacity: 0.4;     
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+}
+
+.searchbar-button{
+    height: 30px;
+    width: 30px;
+    float: inherit;
+    border: none;
+    background-color: #AFCFCD;
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+.searchbar-button:active {
+    border: none;
+}
+
+.icon{
+    height: 1.4em;
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, .6));
+}
