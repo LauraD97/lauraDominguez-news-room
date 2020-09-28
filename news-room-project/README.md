@@ -2,7 +2,7 @@
 
 ### Laura Domínguez, 2020
 
-![](https://github.com/LauraD97/lauraDominguez-news-room/tree/master/news-room-project/src/utils/news-room.png)
+![](https://github.com/LauraD97/lauraDominguez-news-room/blob/master/news-room-project/src/utils/news-room.PNG)
 
 ## About the project
 
