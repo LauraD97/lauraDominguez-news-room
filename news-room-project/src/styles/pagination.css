@@ -1,0 +1,17 @@
+.p {
+    padding: .2em;
+}
+
+.pg-icon{
+    height: 1.5em;
+}
+
+.pg-icon2 {
+    height: 1em;
+}
+
+.pg-btn {
+    border: none;
+    background: none;
+    color: #747474;
+}

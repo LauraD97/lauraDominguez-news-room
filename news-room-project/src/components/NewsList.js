@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import New from './New';
+import Pagination from './Pagination';
 import '../styles/news.css';
 import loadi from '../utils/icons/loading.svg';
 import loadg from '../utils/loading.gif';
@@ -14,11 +15,10 @@ const NewsList = ({
     loadingError,
     fetchNewsList
 }) => {
-
-    //const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        //setIndex(0);
+        setIndex(0);
         fetchNewsList(path);
     }, [path, fetchNewsList]);
 
@@ -26,7 +26,7 @@ const NewsList = ({
         return (
             <div className="info-container col-md-12">
                 <img className="img" src={error} alt="cargando"/>
-                <p className="img-text">Sorry! There was an error loading the news 🤯</p>                  
+                <p className="img-text">Sorry! There was an error loading the news <span role="img" aria-label="no results"> 🤯 </span></p>                  
             </div> 
         );
     }
@@ -45,17 +45,31 @@ const NewsList = ({
         return (
             <div className="info-container col-md-12">
                 <img className="img" src={nresult} alt="cargando"/>
-                <p className="img-text">No results 🙁</p>                  
+                <p className="img-text">No results <span role="img" aria-label="no results">🙁</span></p>                  
             </div>
         );
     }
 
     return (        
-        <div className="news-container">
-            {news.slice(/*0 + index * 10, 10 + index * 10*/).map((n) => (
-                <New key={n.news_id} data={n} />
-            ))}
-        </div>        
+        <>
+            <Pagination
+                index = {index}
+                length={news.length}
+                setIndex={(n) => setIndex(n)}
+            />
+
+            <div className="news-container">
+                {news.slice(0 + index * 10, 10 + index * 10).map((n) => (
+                    <New key={n.news_id} data={n} />
+                ))}
+            </div> 
+
+            <Pagination
+                index = {index}
+                length={news.length}
+                setIndex={(n) => setIndex(n)}
+            />
+        </>       
     )
 }
 
