@@ -2,6 +2,8 @@
 
 ### Laura Domínguez, 2020
 
+![](https://github.com/LauraD97/lauraDominguez-news-room/tree/master/news-room-project/src/utils/news-room.png)
+
 ## About the project
 
 The site allows you to search and consult news by category by consuming the API [Canillitapp](https://github.com/Canillitapp/headlines-api)
