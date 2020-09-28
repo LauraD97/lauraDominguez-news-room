@@ -22,8 +22,16 @@ const NewsList = ({
         fetchNewsList(path);
     }, [path, fetchNewsList]);
 
+    if(loadingError){
+        return (
+            <div className="info-container col-md-12">
+                <img className="img" src={error} alt="cargando"/>
+                <p className="img-text">Sorry! There was an error loading the news 🤯</p>                  
+            </div> 
+        );
+    }
+
     if(loading){
-        debugger;
         return (
             <div className="info-container col-md-12">
                 <img className="load-i" src={loadi} alt="cargando"/>
@@ -31,22 +39,13 @@ const NewsList = ({
                 <p className="load-text">Cargando...</p>                  
             </div>  
         );
-    }
-
-    if(loadingError){
-        return (
-            <div className="info-container col-md-12">
-                <img className="img" src={error} alt="cargando"/>
-                <p className="img-text">Sorry! There was an error loading the news.</p>                  
-            </div> 
-        );
-    }
+    }    
 
     if (news.length===0) {
         return (
             <div className="info-container col-md-12">
                 <img className="img" src={nresult} alt="cargando"/>
-                <p className="img-text">No results.</p>                  
+                <p className="img-text">No results 🙁</p>                  
             </div>
         );
     }

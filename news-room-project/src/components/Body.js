@@ -19,6 +19,13 @@ const Body = () => {
                     return <News category={param} />;
                 }}
             />
+            <Route
+                path="/categories/search/:word"
+                render={({ match }) => {
+                    const params = { name: 'search', path:'/search/'+ match.params.word};
+                    return <News category={params} />;
+                }}
+            />
         </Switch>
     )
 }

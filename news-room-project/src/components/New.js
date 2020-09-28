@@ -8,13 +8,13 @@ const New = ({ data }) => {
     return (
         <div className="new-container col-md-12">
             <div className="new-card">
-                <img className="new-photo col-md-4" src={(data.img_url===null)? alter_photo: data.img_url}></img>
+                <img className="new-photo col-md-4" src={(data.img_url===null)? alter_photo: data.img_url} alt="image"></img>
 
                 <div className="new-info col-md-8">
                     <h2 className="new-title col-md-12">{data.title}</h2>
                    
                     <div className="col-md-12 f npr">
-                        <img className="new-icon" src={site} alt='Fuente'/>
+                        <img className="new-icon" src={site} alt="site"/>
                         <p className="margin info"><b>Por:</b> {data.source_name}</p>  
                     </div>         
                     
