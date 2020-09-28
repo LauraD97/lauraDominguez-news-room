@@ -14,6 +14,10 @@ body {
     padding: 0px !important;
 }
 
+.npr {
+    padding-right: 0px !important;
+}
+
 .f{
     display: flex;
 }

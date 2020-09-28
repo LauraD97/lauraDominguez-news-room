@@ -7,10 +7,11 @@ function formatDate() {
     if (month.length < 2) 
         month = '0' + month;
     
-        if (day.length < 2) 
+    if (day.length < 2) 
         day = '0' + day;
 
     const d = [year, month, day].join('-')
+    
     return(d);
 }
 

@@ -4,6 +4,7 @@
 
 .header-container {
     background: url(../utils/header-background.png) no-repeat fixed center;
+    margin-bottom: 15px;
 }
 
 /*Logo styles*/
