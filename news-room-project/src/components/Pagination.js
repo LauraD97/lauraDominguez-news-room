@@ -11,7 +11,7 @@ const Pagination = ({index, setIndex, length}) => {
     const indexArr = [...Array(Math.ceil(length / 10)).keys()];
 
     return(
-        <div className="pagination-container col-md-3 offset-md-9 np">
+        <div className="pagination-container col-md-4 offset-md-8 np">
             <button className="pg-btn p" onClick={() => setIndex(0)}>
                 <span><img className="pg-icon" src={start} alt='start'/></span>
             </button>
@@ -20,7 +20,7 @@ const Pagination = ({index, setIndex, length}) => {
                 <span><img className="pg-icon2" src={prev} alt='previous'/></span>
             </button>
 
-            <span>{0 + index * 10} - {10 + index * 10} of {length} news</span>
+            <span className="pagination-text">{0 + index * 10} - {10 + index * 10} of {length} news</span>
             
             <button className="pg-btn p" onClick={() => (index + 1 < indexArr.length) ? setIndex(index+1) : null}>
                 <span><img className="pg-icon2" src={next} alt='next'/></span>
